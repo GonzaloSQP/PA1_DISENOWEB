@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Marcio G. Sequeiros Palomino">
+  <meta name="description" content="Formulario de contacto y tabla de preferencias de comunicación.">
+  <link rel="icon" type="image/png" href="recursos/favicon.png">
+  <title>Formulario y Preferencias</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina-web">
+
+  <header class="encabezado-principal">
+    <h1 class="titulo-principal">Formulario y Preferencias</h1>
+    <p class="descripcion-profesional">Completa el formulario o consulta tus medios de contacto preferidos</p>
+  </header>
+
+  <nav class="navegacion-principal">
+    <ul class="lista-de-navegacion">
+      <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+      <li><a class="enlace-navegacion" href="galeria.html">Galería</a></li>
+      <li><a class="enlace-navegacion" href="formulario.html">Formulario</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenido-principal">
+
+    <!-- Formulario -->
+    <section class="bloque-de-seccion">
+      <h2 class="titulo-de-seccion">Formulario de contacto</h2>
+      <form class="formulario-de-contacto" action="procesar_formulario.php" method="post" novalidate>
+        <div class="campo-formulario">
+          <label for="nombre" class="etiqueta-formulario">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required aria-required="true">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="correo" class="etiqueta-formulario">Correo electrónico:</label>
+          <input type="email" id="correo" name="correo" placeholder="tu@correo.com" required aria-required="true">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="telefono" class="etiqueta-formulario">Teléfono:</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="+51 999 999 999" pattern="^\+?\d{7,15}$" aria-describedby="telefonoHelp">
+          <small id="telefonoHelp" class="ayuda-texto">Formato internacional opcional</small>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="asunto" class="etiqueta-formulario">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Motivo del mensaje" required aria-required="true">
+        </div>
+
+        <div class="campo-formulario">
+          <label for="mensaje" class="etiqueta-formulario">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required aria-required="true"></textarea>
+        </div>
+
+        <button type="submit" class="boton-enviar">Enviar</button>
+      </form>
+    </section>
+
+    <!-- Tabla de preferencias -->
+    <section class="bloque-de-seccion">
+      <h2 class="titulo-de-seccion">Tabla de preferencias de contacto</h2>
+      <table class="tabla-de-contacto tabla-personalizada" summary="Disponibilidad de canales de comunicación">
+        <caption>Disponibilidad de canales para contacto</caption>
+        <thead>
+          <tr>
+            <th scope="col">Canal</th>
+            <th scope="col">Disponibilidad</th>
+            <th scope="col">Comentarios</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Correo electrónico</td>
+            <td>Disponible 24/7</td>
+            <td>Respuesta rápida</td>
+          </tr>
+          <tr>
+            <td>WhatsApp</td>
+            <td>Lunes a viernes (8 a.m. - 6 p.m.)</td>
+            <td>Uso preferido para urgencias</td>
+          </tr>
+          <tr>
+            <td>Redes sociales</td>
+            <td>Fines de semana</td>
+            <td>Publicaciones e interacción general</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer class="pie-de-pagina">
+    <p class="texto-pie">© 2025 Marcio G. Sequeiros Palomino | Formulario y Tabla</p>
+  </footer>
+
+</body>
+</html>

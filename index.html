@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portafolio de Ana Torres</title>
-  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio de Marcio G. Sequeiros Palomino</title>
+  <meta name="description" content="Portafolio personal de Marcio Gonzalo Sequeiros Palomino, estudiante de Ingeniería de Sistemas e Informática, mostrando proyectos y contacto." />
+  <link rel="icon" href="recursos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="estilos.css" />
 </head>
 <body class="pagina-web">
 
-  <header class="encabezado-principal">
-    <h1 class="titulo-principal"> Marcio G. Sequeiros Palomino</h1>
-    <p class="descripcion-profesional">Estudiante de Ingenieria de Sistemas e Informatica | Analista de Sistemas</p>
+  <header class="encabezado-principal" role="banner">
+    <h1 class="titulo-principal">Marcio G. Sequeiros Palomino</h1>
+    <p class="descripcion-profesional">Estudiante de Ingeniería de Sistemas e Informática | Analista de Sistemas</p>
   </header>
 
-  <nav class="navegacion-principal">
+  <nav class="navegacion-principal" role="navigation" aria-label="Menú principal">
     <ul class="lista-de-navegacion">
       <li><a class="enlace-navegacion" href="#seccion-sobre-mi">Sobre mí</a></li>
       <li><a class="enlace-navegacion" href="#seccion-proyectos">Proyectos</a></li>
@@ -21,32 +23,77 @@
     </ul>
   </nav>
 
-  <main class="contenido-principal">
+  <main class="contenido-principal" role="main" tabindex="-1">
 
-    <section id="seccion-sobre-mi" class="bloque-de-seccion">
-      <h2 class="titulo-de-seccion">Sobre mí</h2>
-      <p class="parrafo-de-seccion">Mi nombre es, Marcio Gonzalo Sequeiros Palomino, Estudiante de Ingeniera de Sistemas e Informatica.</p>
-      <img class="imagen-de-perfil" src="recursos/fotodeperfil.jpg" alt="Foto de perfil de Ana Torres">
+    <section id="seccion-sobre-mi" class="bloque-de-seccion" tabindex="0" aria-labelledby="sobre-mi-titulo">
+      <h2 id="sobre-mi-titulo" class="titulo-de-seccion">Sobre mí</h2>
+      <p class="parrafo-de-seccion">Hola, soy Marcio Gonzalo Sequeiros Palomino, un apasionado estudiante de Ingeniería de Sistemas e Informática, comprometido con el aprendizaje continuo y la innovación tecnológica.</p>
+      <img
+        class="imagen-de-perfil"
+        src="recursos/fotodeperfil.jpg"
+        alt="Foto de perfil de Marcio G. Sequeiros Palomino"
+        loading="lazy"
+        width="250"
+        height="250"
+      />
     </section>
 
-    <section id="seccion-proyectos" class="bloque-de-seccion">
-      <h2 class="titulo-de-seccion">Proyectos recientes</h2>
+    <section id="seccion-proyectos" class="bloque-de-seccion" tabindex="0" aria-labelledby="proyectos-titulo">
+      <h2 id="proyectos-titulo" class="titulo-de-seccion">Proyectos recientes</h2>
       <ul class="lista-de-proyectos">
-        <li><a class="enlace-proyecto" href="https://github.com/GonzaloSQP/PresentacionWeb">Mi Presentacion</a></li>
-        <li><a class="enlace-proyecto" href="https://github.com/GonzaloSQP/ConsultarRUC">Proyecto para consumir Api para consultar el ruc</a></li>
+        <li>
+          <a
+            class="enlace-proyecto"
+            href="https://github.com/GonzaloSQP/PresentacionWeb"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Mi Presentación</a
+          >
+        </li>
+        <li>
+          <a
+            class="enlace-proyecto"
+            href="https://github.com/GonzaloSQP/ConsultarRUC"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Proyecto para consumir API para consultar el RUC</a
+          >
+        </li>
       </ul>
     </section>
 
-    <section id="seccion-contacto" class="bloque-de-seccion">
-      <h2 class="titulo-de-seccion">Contacto</h2>
-      <p class="dato-contacto">Correo: <a class="enlace-contacto" href="cuentamarcio123@gmail.com">cuentamarcio123@gmail.com</a></p>
-      <p class="dato-contacto">Github: <a class="enlace-contacto" href="https://github.com/GonzaloSQP">github.com/GonzaloSQP</a></p>
+    <section id="seccion-contacto" class="bloque-de-seccion" tabindex="0" aria-labelledby="contacto-titulo">
+      <h2 id="contacto-titulo" class="titulo-de-seccion">Contacto</h2>
+      <p class="dato-contacto">
+        Correo:
+        <a class="enlace-contacto" href="mailto:cuentamarcio123@gmail.com"
+          >cuentamarcio123@gmail.com</a
+        >
+      </p>
+      <p class="dato-contacto">
+        GitHub:
+        <a
+          class="enlace-contacto"
+          href="https://github.com/GonzaloSQP"
+          target="_blank"
+          rel="noopener noreferrer"
+          >github.com/GonzaloSQP</a
+        >
+      </p>
+    </section>
+
+    <section class="bloque-de-seccion" aria-label="Explora más">
+      <h2 class="titulo-de-seccion">Explora más</h2>
+      <div class="contenedor-botones" role="group" aria-label="Enlaces a más secciones">
+        <a href="galeria.html" class="boton-enlace">Ir a Galería</a>
+        <a href="formulario.html" class="boton-enlace">Ir a Formulario</a>
+      </div>
     </section>
 
   </main>
 
-  <footer class="pie-de-pagina">
-    <p class="texto-pie">© 2025 Marcio G. Sequeiros Palomino | Producto Academico "1"</p>
+  <footer class="pie-de-pagina" role="contentinfo">
+    <p class="texto-pie">© 2025 Marcio G. Sequeiros Palomino | Producto Académico "1"</p>
   </footer>
 
 </body>

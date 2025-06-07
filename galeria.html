@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Multimedia</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="pagina-web">
+
+  <header class="encabezado-principal">
+    <h1 class="titulo-principal">Galería Multimedia</h1>
+    <p class="descripcion-profesional">Explora imágenes adaptativas, SVG e interactivas</p>
+  </header>
+
+  <nav class="navegacion-principal">
+    <ul class="lista-de-navegacion">
+      <li><a class="enlace-navegacion" href="index.html">Inicio</a></li>
+      <li><a class="enlace-navegacion" href="galeria.html">Galería</a></li>
+      <li><a class="enlace-navegacion" href="formulario.html">Formulario</a></li>
+    </ul>
+  </nav>
+
+  <main class="contenido-principal">
+
+    <!-- Imagen Adaptativa -->
+    <section class="bloque-de-seccion">
+      <h2 class="titulo-de-seccion">Imagen Adaptativa</h2>
+      <picture>
+        <source media="(max-width: 600px)" srcset="recursos/img-pequena.jpg">
+        <source media="(max-width: 1200px)" srcset="recursos/img-mediana.jpg">
+        <img src="recursos/adaptativa.jpg" alt="Imagen adaptativa con picture">
+      </picture>
+    </section>
+
+    <!-- Imagen Interactiva -->
+    <section class="bloque-de-seccion">
+      <h2 class="titulo-de-seccion">Imagen Interactiva</h2>
+      <figure>
+        <img src="recursos/infografia.jpg" usemap="#mapa-contacto" alt="Infografía interactiva">
+        <figcaption class="parrafo-de-seccion">Haz clic en la imagen para interactuar</figcaption>
+      </figure>
+      <map name="mapa-contacto">
+        <area shape="rect" coords="34,44,270,1000" href="https://ed.team/cursos/docker" alt="GitHub" onclick="window.open(this.href); return false;">
+        <area shape="circle" coords="1000,150,60" href="mailto:cuentamarcio123@gmail.com" alt="Correo">
+      </map>
+    </section>
+
+    <!-- Gráfico SVG -->
+    <section class="bloque-de-seccion">
+      <h2 class="titulo-de-seccion">Gráfico SVG</h2>
+    
+      <!-- SVG embebido con animación -->
+      <svg class="svg-grafico" viewBox="0 0 600 150" role="img" aria-labelledby="titulo-svg">
+        <title id="titulo-svg">Gráfico de bienvenida</title>
+        <rect width="600" height="150" fill="#4caf50" />
+        <text x="30" y="85" fill="white" font-size="28" font-family="Segoe UI, sans-serif">
+          ¡Hola desde SVG!
+        </text>
+        <circle cx="550" cy="75" r="20" fill="white">
+          <animate attributeName="r" values="20;25;20" dur="1.5s" repeatCount="indefinite" />
+        </circle>
+      </svg>
+    
+      <!-- SVG externo cargado como objeto -->
+      <object
+      type="image/svg+xml"
+      data="recursos/ejQ7ek01.svg"
+      class="svg-objeto"
+      aria-label="Gráfico SVG externo">
+      Tu navegador no puede mostrar el SVG.
+    </object>
+    
+    </section>
+    
+
+  </main>
+
+  <footer class="pie-de-pagina">
+    <p class="texto-pie">© 2025 Marcio G. Sequeiros Palomino | Galería Multimedia</p>
+  </footer>
+
+</body>
+</html>
